@@ -13,8 +13,9 @@
 
     <!-- Header -->
     <header id="showcase">
-        <div class="bg-image"></div>
-        <h1 class="showcase-header">Shan's Resume.</h1>
+        <div class="bg-image">
+        	<div id="showcase-header"><h1>Shan's Resume.</h1></div>
+        </div>
     </header>
 
 
@@ -210,10 +211,19 @@
     	(function(){
 		    window.onscroll = () => {
 
-		        var sectionB = document.getElementById("section-b");
-		        var sectionB_img1 = document.getElementById("section-b-img1");
-		        var sectionB_img2 = document.getElementById("section-b-img2");
+		    	const showcaseHeader = document.getElementById("showcase-header");
+		        const sectionB = document.getElementById("section-b");
+		        const sectionB_img1 = document.getElementById("section-b-img1");
+		        const sectionB_img2 = document.getElementById("section-b-img2");
 
+		        //for heading
+		        if (false) {
+		        } else if (showcaseHeader.getBoundingClientRect().top <= 0){
+		            console.log("hi","msg");
+		            showcaseHeader.classList.add("sticky");
+		        } 
+
+		        //for graduation animation
 		        if (false) {
 		        } else if (window.innerHeight - sectionB.getBoundingClientRect().bottom > 0){
 		            sectionB_img1.classList.add("appear");
